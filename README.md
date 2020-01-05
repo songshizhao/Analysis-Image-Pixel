@@ -1,6 +1,6 @@
 # Image-Edge-Detection
 ## what is this?  
-This is an example using Nuget plugin 'AnalysisImagePixel' 
+This is an example using Nuget plugin 'AnalysisImagePixel'  
 'AnalysisImagePixel' is developed under .net standard framework, so it can be used in UWP/Net Framework(4.6.x+) applications
 ## what can 'AnalysisImagePixel' do
 detect image edge and fill the empty part with color(optional)

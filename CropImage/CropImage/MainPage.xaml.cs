@@ -65,8 +65,11 @@ namespace CropImage
 
 					//
 					// **************get the result**************
-					var resultPixels =ImagePixels.AnsysPixel(pixels.DetachPixelData(), (int)bitmapDecoder.PixelWidth, (int)bitmapDecoder.PixelHeight);
+					//var resultPixels =ImagePixels.AnsysPixel(pixels.DetachPixelData(), (int)bitmapDecoder.PixelWidth, (int)bitmapDecoder.PixelHeight);
 
+					var resultPixels = await ImagePixels.AnsysPixelAsync(pixels.DetachPixelData(), (int)bitmapDecoder.PixelWidth, (int)bitmapDecoder.PixelHeight);
+
+					
 					//
 					using (var ms = new InMemoryRandomAccessStream())
 					{

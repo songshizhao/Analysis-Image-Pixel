@@ -7,9 +7,9 @@ AnalysisImagePixel插件是基于.net standard框架开发的, 因此可用于UW
 下面是一些效果图:  
 ![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/1.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/1.1.jpg)  
 ![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/2.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/2.1.jpg)  
-![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/1.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/3.1.jpg)  
-![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/3.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/4.1.jpg)  
-![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/1.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/4.1.jpg)  
+![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/3.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/3.1.jpg)  
+![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/4.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/4.1.jpg)  
+![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/5.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/5.1.jpg)  
 ## 如何使用
 ### 安装Nuget插件 
 PM->Install-Package AnalysisImagePixel  

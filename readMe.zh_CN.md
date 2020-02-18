@@ -5,8 +5,11 @@ AnalysisImagePixel插件是基于.net standard框架开发的, 因此可用于UW
 ## 'AnalysisImagePixel'插件能干什么
 检测图片边缘,向边缘包围的闭合区域填充颜色(可选)  
 下面是一些效果图:  
-![example](https://www.songshizhao.com/editor/attached/image/20200105/20200105152045_0262.png)  
-![example](https://www.songshizhao.com/editor/attached/image/20200105/20200105152104_3705.png)  
+![example](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/1.jpg)![example](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/1.1.jpg)  
+![example](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/2.jpg)![example](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/2.1.jpg)  
+![example](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/1.jpg)![example](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/3.1.jpg)  
+![example](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/3.jpg)![example](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/4.1.jpg)  
+![example](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/1.jpg)![example](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/4.1.jpg)  
 ## 如何使用
 ### 安装Nuget插件 
 PM->Install-Package AnalysisImagePixel  

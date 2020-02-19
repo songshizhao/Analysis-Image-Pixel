@@ -16,41 +16,36 @@ PM->Install-Package AnalysisImagePixel
 使用过程就是读取图片像素,然后调用返回像素结果。    
 ### 示例代码:
 ``` csharp
-		using (var stream= await file.OpenReadAsync())
-				{
-					_bitmap = new BitmapImage();
-					await _bitmap.SetSourceAsync(stream);
-					Image1.Source = _bitmap;
-					//
-					BitmapDecoder bitmapDecoder = await BitmapDecoder.CreateAsync(stream);
-					//
-					var pixels = await bitmapDecoder.GetPixelDataAsync();
-                    //----------------------------------------------------------
+using (var stream= await file.OpenReadAsync())
+{
+	_bitmap = new BitmapImage();
+	await _bitmap.SetSourceAsync(stream);
+	Image1.Source = _bitmap;
+	//
+	BitmapDecoder bitmapDecoder = await BitmapDecoder.CreateAsync(stream);
+	//
+	var pixels = await bitmapDecoder.GetPixelDataAsync();
+        //----------------------------------------------------------
+        MainFunction main = new MainFunction();
 
+        main.MsgReporter = this;// optional
 
-                    MainFunction main = new MainFunction();
+        var resultPixels=await main.Run(pixels.DetachPixelData(), (int)bitmapDecoder.PixelWidth, (int)bitmapDecoder.PixelHeight);
+        //
+        using (var ms = new InMemoryRandomAccessStream())
+	{
+		float devicedpi = Windows.Graphics.Display.DisplayInformation.GetForCurrentView().LogicalDpi;
+		var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.PngEncoderId, ms);
+		encoder.SetPixelData(BitmapPixelFormat.Bgra8, BitmapAlphaMode.Ignore,bitmapDecoder.PixelWidth,bitmapDecoder.PixelHeight, devicedpi, devicedpi, resultPixels);
+		await encoder.FlushAsync();
 
-                    main.MsgReporter = this;// optional
+		var _bitmap2 = new BitmapImage();
+		await _bitmap2.SetSourceAsync(ms);
+		Image2.Source = _bitmap2;
 
-                    var resultPixels=await main.Run(pixels.DetachPixelData(), (int)bitmapDecoder.PixelWidth, (int)bitmapDecoder.PixelHeight);
-
-                    //
-                    using (var ms = new InMemoryRandomAccessStream())
-					{
-						float devicedpi = Windows.Graphics.Display.DisplayInformation.GetForCurrentView().LogicalDpi;
-						var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.PngEncoderId, ms);
-						encoder.SetPixelData(BitmapPixelFormat.Bgra8, BitmapAlphaMode.Ignore, bitmapDecoder.PixelWidth, bitmapDecoder.PixelHeight, devicedpi, devicedpi, resultPixels);
-						await encoder.FlushAsync();
-
-						var _bitmap2 = new BitmapImage();
-						await _bitmap2.SetSourceAsync(ms);
-						Image2.Source = _bitmap2;
-
-					}
-
-
-					//--
-				}
+	}
+//--
+}
 
 ```
 ### 详细信息

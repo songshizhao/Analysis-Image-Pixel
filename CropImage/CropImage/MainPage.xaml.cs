@@ -1,7 +1,12 @@
 ﻿using AnalysisImagePixel;
+using MathNet.Numerics;
+using MathNet.Numerics.LinearAlgebra;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using Windows.Graphics.Imaging;
 using Windows.Storage.Streams;
 using Windows.UI;
@@ -13,7 +18,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace CropImage
 {
-	public sealed partial class MainPage : Page
+	public sealed partial class MainPage : Page,IProgressMsg
     {
 
 		public BitmapImage _bitmap { get; set; }
@@ -48,30 +53,17 @@ namespace CropImage
 					BitmapDecoder bitmapDecoder = await BitmapDecoder.CreateAsync(stream);
 					//
 					var pixels = await bitmapDecoder.GetPixelDataAsync();
-					//
-					// **************use some option**********************
-
-					ImagePixels._threshold = EdgeDetectionThreshold;
-
-					ImagePixels._useEdgeColor = CoverEdgeColor;
-					ImagePixels.egdeColor_r = Convert.ToByte(_PickedColor.R);
-					ImagePixels.egdeColor_g = Convert.ToByte(_PickedColor.G);
-					ImagePixels.egdeColor_b = Convert.ToByte(_PickedColor.B);
-					ImagePixels.egdeColor_a = Convert.ToByte(_PickedColor.A);
+                    //----------------------------------------------------------
 
 
-					//ImagePixels._fillOption = FillOption.RandomColor;
-			
+                    MainFunction main = new MainFunction();
 
-					//
-					// **************get the result**************
-					//var resultPixels =ImagePixels.AnsysPixel(pixels.DetachPixelData(), (int)bitmapDecoder.PixelWidth, (int)bitmapDecoder.PixelHeight);
+                    main.MsgReporter = this;// optional
 
-					var resultPixels = await ImagePixels.AnsysPixelAsync(pixels.DetachPixelData(), (int)bitmapDecoder.PixelWidth, (int)bitmapDecoder.PixelHeight);
+                    var resultPixels=await main.Run(pixels.DetachPixelData(), (int)bitmapDecoder.PixelWidth, (int)bitmapDecoder.PixelHeight);
 
-					
-					//
-					using (var ms = new InMemoryRandomAccessStream())
+                    //
+                    using (var ms = new InMemoryRandomAccessStream())
 					{
 						float devicedpi = Windows.Graphics.Display.DisplayInformation.GetForCurrentView().LogicalDpi;
 						var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.PngEncoderId, ms);
@@ -117,7 +109,17 @@ namespace CropImage
 			}
 
 		}
-	}
+
+        void IProgressMsg.ShowMessage(string msg)
+        {
+            ToastMessage.Toast(msg);
+        }
+
+        void IProgressMsg.ShowProcess(double process)
+        {
+           
+        }
+    }
 
 
 

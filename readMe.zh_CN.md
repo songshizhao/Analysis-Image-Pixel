@@ -10,9 +10,9 @@ AnalysisImagePixel插件是基于.net standard框架开发的, 因此可用于UW
 ![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/3.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/3.1.jpg)  
 ![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/4.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/4.1.jpg)  
 ![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/5.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/5.1.jpg)  
-![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/6.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/6.1.jpg)  
-![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/7.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/7.1.jpg)  
-![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/8.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/8.1.jpg)  
+![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/6.png)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/6.1.jpg)  
+![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/7.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/7.1.png)  
+![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/8.png)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/8.1.png)  
 ## 如何使用
 ### 安装Nuget插件 
 PM->Install-Package AnalysisImagePixel  

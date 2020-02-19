@@ -13,8 +13,16 @@ AnalysisImagePixel插件是基于.net standard框架开发的, 因此可用于UW
 ## 如何使用
 ### 安装Nuget插件 
 PM->Install-Package AnalysisImagePixel  
-使用过程就是读取图片像素,然后调用返回像素结果。    
+使用过程就是读取图片像素,然后调用返回像素结果。   
 ### 示例代码:
+``` csharp
+var pixels = await bitmapDecoder.GetPixelDataAsync();
+//----------------------------------------------------------
+MainFunction main = new MainFunction();
+main.MsgReporter = this;// optional
+var resultPixels=await main.Run(pixels.DetachPixelData(), (int)bitmapDecoder.PixelWidth, (int)bitmapDecoder.PixelHeight);
+```
+### 示例代码full(under UWP):
 ``` csharp
 using (var stream= await file.OpenReadAsync())
 {
@@ -46,7 +54,6 @@ using (var stream= await file.OpenReadAsync())
 	}
 //--
 }
-
 ```
 ### 详细信息
 [完整代码](https://github.com/songshizhao/Image-Edge-Detection/blob/master/CropImage/CropImage/MainPage.xaml.cs "how to use")

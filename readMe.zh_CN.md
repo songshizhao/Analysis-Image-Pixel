@@ -1,15 +1,15 @@
-# Image-Edge-Detection
+# Analysis-Image-Pixel
 ## 这是什么?  
 使用Nuget插件AnalysisImagePixel的一个示例  
 AnalysisImagePixel插件是基于.net standard框架开发的, 因此可用于UWP/Net Framework(4.6.x+)框架的APP
 ## 'AnalysisImagePixel'插件能干什么
 将图片转换为卡通风格，忽略面部细节和增强对比度。  
 下面是一些效果图:  
-![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/1.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/1.1.jpg)  
-![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/2.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/2.1.jpg)  
-![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/3.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/3.1.jpg)  
-![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/4.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/4.1.jpg)  
-![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/5.jpg)![image](https://raw.githubusercontent.com/songshizhao/Image-Edge-Detection/master/CropImage/CropImage/samples/5.1.jpg)  
+![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/1.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/1.1.jpg)  
+![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/2.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/2.1.jpg)  
+![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/3.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/3.1.jpg)  
+![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/4.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/4.1.jpg)  
+![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/5.jpg)![image](https://raw.githubusercontent.com/songshizhao/Analysis-Image-Pixel/master/CropImage/CropImage/samples/5.1.jpg)  
 ## 如何使用
 ### 安装Nuget插件 
 PM->Install-Package AnalysisImagePixel  

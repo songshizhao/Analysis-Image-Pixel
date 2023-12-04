@@ -1,4 +1,5 @@
 # Analysis-Image-Pixel
+# replaced by https://github.com/songshizhao/AnimeGANv2_Sharp which use AnimeGANv2.onnx&opencvsharp
 ##  What is it?  
 This is an example for Nuget plugin ‘AnalysisImagePixel’
 AnalysisImagePixel plugin code is written under .net standard 2.0, so it can be used in App under UWP/.Net Framework(4.6.x+)  
